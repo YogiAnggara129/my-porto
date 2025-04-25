@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogi Anggara – Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-purple-500 via-blue-400 to-green-300 scroll-smooth" data-lang="id">
+  <!-- Container untuk menampung blobs -->
+  <div id="blob-container" class="relative w-full h-full overflow-hidden">
+    <!-- Blobs akan di-inject di sini -->
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-30 backdrop-filter backdrop-blur-md bg-white bg-opacity-0 transition-all duration-300">
+    <div class="container mx-auto px-8 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="text-white text-2xl font-bold">Yogi Anggara</div>
+      <!-- Menu Links -->
+      <ul id="menu" class="hidden md:flex space-x-8 text-white">
+        <li><a href="#home" data-i18n="nav_home" class="hover:text-gray-200">Beranda</a></li>
+        <li><a href="#about" data-i18n="nav_about" class="hover:text-gray-200">Tentang</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio" class="hover:text-gray-200">Portfolio</a></li>
+        <li><a href="#experience" data-i18n="nav_experience" class="hover:text-gray-200">Pengalaman</a></li>
+        <li><a href="#webinar" data-i18n="nav_webinar" class="hover:text-gray-200">Webinar</a></li>
+        <li><a href="#contact" data-i18n="nav_contact" class="hover:text-gray-200">Kontak</a></li>
+      </ul>
+      <!-- Right Controls -->
+      <div class="flex items-center space-x-4">
+        <button id="lang-toggle" class="px-4 py-2 bg-white bg-opacity-30 text-white rounded-lg hover:bg-opacity-50 transition">🇮🇩 ID</button>
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 relative z-10" data-aos="fade-up">
+    <div class="relative max-w-4xl w-full">
+      <div class="relative overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-30 backdrop-blur-2xl drop-shadow-xl rounded-3xl p-14">
+        <div class="absolute inset-0 bg-white bg-opacity-5 backdrop-blur-3xl"></div>
+        <div class="relative flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2 text-center md:text-left z-10" data-aos="fade-right">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white" data-i18n="hero_title">Halo, Saya<br><span class="text-purple-200">Yogi Anggara</span></h1>
+            <p class="mt-4 text-white opacity-90" data-i18n="hero_subtitle">Mobile Developer | Fullstack Engineer</p>
+            <div class="mt-6 flex justify-center md:justify-start space-x-4">
+              <a href="#contact" class="px-6 py-3 bg-purple-200 bg-opacity-30 text-white rounded-lg hover:bg-opacity-50" data-i18n="hero_contact">Hubungi Saya</a>
+              <a href="/assets/YogiAnggara_CV.pdf" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-purple-700" data-i18n="hero_cv">Download CV</a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center z-10" data-aos="fade-left">
+            <div class="relative w-64 h-64">
+              <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-2xl rounded-full"></div>
+              <img src="src/profile.jpeg" alt="Your Photo" class="relative w-full h-full object-cover rounded-full border-2 border-white drop-shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+   <!-- About Section -->
+   <section id="about" class="py-20 px-6 bg-white bg-opacity-10 backdrop-blur-md border-t border-white border-opacity-20" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">Tentang Saya</h2>
+      <p class="leading-relaxed text-white/90 mb-6" data-aos="fade-up" data-aos-delay="100">
+        Sebagai Full Stack Engineer, saya fokus merancang dan mengembangkan aplikasi yang handal dan skalabel. Saya memastikan setiap rilis dijalankan dengan pipeline yang terotomatisasi, menjaga kualitas kode melalui review dan testing, serta berkolaborasi erat dengan tim untuk deliver solusi terbaik.
+      </p>
+      <!-- Feature Highlights -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
+          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span class="text-white/80">Java Spring Boot</span>
+        </div>
+        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
+          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span class="text-white/80">Flutter & Dart</span>
+        </div>
+        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
+          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span class="text-white/80">JavaScript & Web Development</span>
+        </div>
+        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
+          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span class="text-white/80">Microservices Architecture</span>
+        </div>
+        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
+          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <span class="text-white/80">CI/CD & DevOps Practices</span>
+        </div>
+      </div>
+      <!-- /Feature Highlights -->
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-white text-center mb-12" data-i18n="portfolio_title">Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
+          <img src="https://play-lh.googleusercontent.com/48_qSFJtbwjzRR06VOoH7jYTDXh1VzOVSo-rGf8sDeqgmKih1B_OcFPKRq8hEpHw2gE=w5120-h2880-rw" alt="HKI Apps" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
+          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj2_title">HKI Apps</h3>
+          <p class="relative z-10 text-white mt-2" data-i18n="proj1_desc">Aplikasi ERP untuk HKI</p>
+          <a href="https://play.google.com/store/apps/details?id=com.hkinfrastruktur.app&hl=id" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj1_link">Lihat Repository →</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="350">
+          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
+          <img src="https://play-lh.googleusercontent.com/sRpiNp8Y9dYIkILF8T-zJCpoJMMnGe2nAjRQEw9IOYRboLtjfEJKrIIuMomA0PdFvDk=w5120-h2880-rw" alt="Sys Matrica" class="w-64 h-64  relative z-10 rounded-lg mb-4 w-full object-cover">
+          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">Sys Matrica</h3>
+          <p class="relative z-10 text-white mt-2" data-i18n="proj3_desc">Aplikasi ERP Matrica</p>
+          <a href="https://play.google.com/store/apps/details?id=com.sysmatrica.app&hl=id" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj2_link">Lihat Repository →</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="250">
+          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
+          <img src="https://user-images.githubusercontent.com/76767053/165685998-f523556b-7f11-4873-9173-272990a1a8dd.png" alt="BadminTop" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
+          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj1_title">BadminTop</h3>
+          <p class="relative z-10 text-white mt-2" data-i18n="proj1_desc">BadminTop is a badminton court booking application. This application is used for project submission as a graduation requirement in the "Learn to Create Flutter Applications for Beginners" class on Dicoding. From this project I got a 5 star rating. For the certificate, click here.</p>
+          <a href="https://github.com/YogiAnggara129/badmintop" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj3_link">Lihat Repository →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Lihat Selengkapnya Button -->
+    <div class="text-center mt-12">
+      <a href="https://www.linkedin.com/in/yogi-anggara/"
+        class="inline-block px-8 py-3 bg-purple-500 bg-opacity-75 text-white font-semibold rounded-full hover:bg-opacity-100 transition">
+        Lihat Selengkapnya
+      </a>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <!-- Experience Section Start -->
+  <section id="experience" class="pt-36 pb-32 bg-slate-700" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+      <!-- Header -->
+      <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-delay="100">
+        <h4 class="font-semibold text-lg text-purple-200 mb-2">Experience</h4>
+        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Pengalaman Terbaru</h2>
+        <p class="font-medium text-md text-gray-400 md:text-lg">Berikut adalah beberapa pengalaman yang berkaitan dengan teknologi.</p>
+      </div>
+      <!-- Timeline List -->
+      <ol class="relative">
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">Januari 2025 - Sekarang</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Fullstack Engineer</h3>
+            <h4 class="text-base font-semibold text-gray-200">Digital Exceleration Nusantara</h4>
+            <p class="mt-4 text-gray-400">Mengembangkan dan maintenance proyek perbankan dengan menerapkan microservice untuk meningkatkan skalabilitas</p>
+          </div>
+        </li>
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">Januari - Desember 2024</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
+            <h4 class="text-base font-semibold text-gray-200">Matrica Consulting Service</h4>
+            <p class="mt-4 text-gray-400">Mengembangkan aplikasi mobile dengan fokus pada sistem ERP</p>
+          </div>
+        </li>
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">Juli - Desember 2023</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
+            <h4 class="text-base font-semibold text-gray-200">Terralogiq</h4>
+            <p class="mt-4 text-gray-400">Mengembangkan Aplikasi mobile</p>
+          </div>
+        </li>
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">Januari - Juni 2023</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Frontend Developer Freelance</h3>
+            <h4 class="text-base font-semibold text-gray-200">Tema Data Rekayasa Digital</h4>
+            <p class="mt-4 text-gray-400">Mengembangkan web LMS</p>
+          </div>
+        </li>
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">September 2022 - Maret 2023</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
+            <h4 class="text-base font-semibold text-gray-200">Solusi Digital Industri</h4>
+            <p class="mt-4 text-gray-400">Mengembangkan aplikasi mobile</p>
+          </div>
+        </li>
+        <!-- Item 1 -->
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">September 2021</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Core Team | Machine Learning Path Developer</h3>
+            <h4 class="text-base font-semibold text-gray-200">GDSC UIN Sunan Kalijaga</h4>
+            <p class="mt-4 text-gray-400">Merancang jalur pembelajaran Machine Learning dan memfasilitasi workshop bagi anggota.</p>
+          </div>
+        </li>
+        <!-- Item 2 -->
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">Februari – April 2021</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Data Engineer Internship</h3>
+            <h4 class="text-base font-semibold text-gray-200">Xeratic</h4>
+            <p class="mt-4 text-gray-400">Melakukan transformasi data menggunakan Pentaho dan R untuk analisis statistik.</p>
+          </div>
+        </li>
+        <!-- Item 3 -->
+        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">2020 – 2021</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Asisten Praktikum Metode Statistika</h3>
+            <h4 class="text-base font-semibold text-gray-200">UIN Sunan Kalijaga</h4>
+            <p class="mt-4 text-gray-400">Memberikan dukungan teknis dan evaluasi penggunaan R untuk analisis data statistik.</p>
+          </div>
+        </li>
+        <!-- Item 4 -->
+        <li class="pb-10 border-gray-600" data-aos="fade-right" data-aos-delay="150">
+          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
+          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
+            <time class="block text-sm text-gray-300">2020 – 2021</time>
+            <h3 class="text-xl font-semibold text-white mt-2">Asisten Praktikum Algoritma & Pemrograman</h3>
+            <h4 class="text-base font-semibold text-gray-200">UIN Sunan Kalijaga</h4>
+            <p class="mt-4 text-gray-400">Membimbing mahasiswa memahami konsep dasar algoritma dan evaluasi kode C.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <!-- Lihat Selengkapnya Button -->
+    <div class="text-center mt-12">
+      <a href="https://www.linkedin.com/in/yogi-anggara/"
+        class="inline-block px-8 py-3 bg-purple-500 bg-opacity-75 text-white font-semibold rounded-full hover:bg-opacity-100 transition">
+        Lihat Selengkapnya
+      </a>
+    </div>
+  </section>
+  <!-- Experience Section End -->
+
+
+  <!-- Webinar Section -->
+  <section id="webinar" class="py-20 px-6 bg-white bg-opacity-10 backdrop-blur-md" data-aos="fade-up" data-aos-delay="350">
+    <div class="max-w-4xl mx-auto text-center text-white">
+      <h2 class="text-4xl font-bold mb-8">Webinar</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <iframe src="https://www.youtube.com/embed/NPbsAhVJVzE?si=tgRRs3YnTGcYiQaJ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="400"></iframe>
+        <iframe src="https://www.youtube.com/embed/8z3aekPPKrQ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="450"></iframe>
+        <iframe src="https://www.youtube.com/embed/8z3aekPPKrQ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="450"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6" data-aos="fade-up" data-aos-delay="650">
+    <div class="max-w-xl mx-auto backdrop-filter backdrop-blur-lg bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl p-8">
+      <h2 class="text-3xl text-white font-bold mb-6 text-center" data-i18n="contact_title">Kontak Saya</h2>
+      <form id="contact-form" class="space-y-4">
+        <input id="name" type="text" placeholder="Nama" data-i18n-placeholder="contact_name" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none" />
+        <input id="email" type="email" placeholder="Email" data-i18n-placeholder="contact_email" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none" />
+        <textarea id="msg" rows="4" placeholder="Pesan" data-i18n-placeholder="contact_message" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none"></textarea>
+        <button type="submit" class="w-full py-3 bg-purple-200 bg-opacity-30 text-white rounded-lg hover:bg-opacity-50 transition" data-i18n="contact_button">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative py-16 bg-gradient-to-tr from-slate-800 to-slate-900 text-white overflow-hidden" data-aos="fade-up" data-aos-delay="750">
+    <div class="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-700 to-blue-500 mix-blend-overlay"></div>
+    <div class="relative max-w-4xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center mb-4">Thank you for visiting!</h3>
+      <p class="text-center text-gray-300 mb-8">Let's connect and build something great together.</p>
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="mailto:yogianggaraaa@gmail.com" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 4.992A2 2 0 014 3h16a2 2 0 011.99 1.992L12 13 2.01 4.992z" />
+            <path d="M22 6.327v11.177A2 2 0 0120 19H4a2 2 0 01-2-2V6.327l10 8.2 10-8.2z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yogi-anggara" target="_blank" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11.75 20h-2.5v-9h2.5v9zm-1.25-10.3a1.45 1.45 0 110-2.9 1.45 1.45 0 010 2.9zm13 10.3h-2.5v-4.5c0-1.1-.4-1.8-1.3-1.8s-1.5.8-1.5 1.8v4.5h-2.5v-9h2.5v1.2c.5-.8 1.4-1.2 2.3-1.2 2.1 0 3.5 1.4 3.5 3.8v5.2z"/>          
+          </svg>
+        </a>
+      </div>
+      <p class="text-center text-gray-500">&copy; 2025 Yogi Anggara. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const translations = {
+      en: {
+        nav_home: 'Home', nav_about: 'About', nav_portfolio: 'Portfolio', nav_experience: 'Experience', nav_webinar: 'Webinars', nav_contact: 'Contact',
+        hero_title: 'Hello, I am<br><span class="text-purple-200">Yogi Anggara</span>',
+        hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
+        hero_contact: 'Contact Me', hero_cv: 'Download CV',
+        about_title: 'About Me',
+        about_text: 'I have a background in Mathematics and have built mobile & web applications with Flutter since 2022. I enjoy solving complex problems, building CI/CD pipelines, and implementing clean architecture.',
+        portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Brief project description, tech stack, and key features.', proj1_link: 'View Repository →',
+        proj2_title: 'Project Two', proj2_desc: 'Brief description of another project.', proj2_link: 'View Repository →',
+        exp_title: 'Experience', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
+        exp2_title: 'Data Engineer Internship', exp2_time: 'February 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
+        webinar_title: 'Webinars',
+        contact_title: 'Contact Me', contact_name: 'Name', contact_email: 'Email', contact_message: 'Message', contact_button: 'Send Message',
+        footer_text: 'Made with <span class="text-pink-500">♥</span> by Yogi Anggara'
+      },
+      id: {
+        nav_home: 'Beranda', nav_about: 'Tentang', nav_portfolio: 'Portfolio', nav_experience: 'Pengalaman', nav_webinar: 'Webinar', nav_contact: 'Kontak',
+        hero_title: 'Halo, Saya<br><span class="text-purple-200">Yogi Anggara</span>', hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
+        hero_contact: 'Hubungi Saya', hero_cv: 'Download CV',
+        about_title: 'Tentang Saya', about_text: 'Saya memiliki latar belakang Matematika dan telah membangun aplikasi mobile & web dengan Flutter sejak 2022. Saya menikmati memecahkan masalah kompleks, membangun pipeline CI/CD, dan mengimplementasikan clean architecture.',
+        portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Deskripsi singkat project, tech stack, dan fitur utama.', proj1_link: 'Lihat Repository →',
+        proj2_title: 'Project Two', proj2_desc: 'Deskripsi singkat project lainnya.', proj2_link: 'Lihat Repository →',
+        exp_title: 'Pengalaman', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
+        exp2_title: 'Data Engineer Internship', exp2_time: 'Februari 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
+        webinar_title: 'Webinar',
+        contact_title: 'Kontak Saya', contact_name: 'Nama', contact_email: 'Email', contact_message: 'Pesan', contact_button: 'Kirim Pesan',
+        footer_text: 'Dibuat dengan <span class="text-pink-500">♥</span> oleh Yogi Anggara'
+      }
+    };
+
+    function applyTranslations(lang) {
+      document.body.setAttribute('data-lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) el.placeholder = translations[lang][key];
+      });
+      document.getElementById('lang-toggle').textContent = lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN';
+    }
+
+    const userLang = navigator.language.toLowerCase();
+    applyTranslations(userLang.startsWith('id') ? 'id' : 'en');
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      const next = document.body.getAttribute('data-lang') === 'id' ? 'en' : 'id';
+      applyTranslations(next);
+    });
+
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 20) {
+        nav.classList.add('bg-opacity-20','shadow-md');
+      } else {
+        nav.classList.remove('bg-opacity-20','shadow-md');
+      }
+    });
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name  = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const msg   = encodeURIComponent(document.getElementById("msg").value);
+
+      const subject = encodeURIComponent("Pesan dari " + name);
+      const body    = encodeURIComponent(
+        "Nama: "  + name + "\n" +
+        "Email: " + email + "\n\n" +
+        msg
+      );
+
+      window.location.href = `mailto:yogianggara129@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
