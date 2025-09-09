@@ -1,421 +1,790 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yogi Anggara – Portfolio</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yogi Anggara – Portfolio</title>
+		<!-- Tailwind CSS CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- AOS Animation Library -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
 
-<body class="bg-gradient-to-br from-purple-500 via-blue-400 to-green-300" data-lang="id">
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-30 backdrop-filter backdrop-blur-md bg-white bg-opacity-0 transition-all duration-300 md:backdrop-blur-25">
-    <div class="container mx-auto px-8 flex justify-between items-center py-4">
-      <!-- Logo -->
-      <div class="text-white text-2xl font-bold">Yogi Anggara</div>
-      <!-- Menu Links -->
-      <ul id="menu" 
-        class="hidden flex-col space-y-4 absolute top-20 left-8 right-8 
-              bg-white bg-opacity-0 backdrop-blur-md 
-              rounded-lg p-6 text-white 
-              border border-white border-opacity-30 
-              transition-all duration-300 ease-in-out transform scale-95 opacity-0 
-              md:opacity-100 md:scale-100 md:border-none
-              md:flex md:flex-row md:static md:space-y-0 md:space-x-8
-              md:bg-opacity-0 md:p-0 md:bg-none md:backdrop-blur-none">
-        <li><a href="#home" data-i18n="nav_home" class="hover:text-gray-200">Home</a></li>
-        <li><a href="#about" data-i18n="nav_about" class="hover:text-gray-200">About</a></li>
-        <li><a href="#portfolio" data-i18n="nav_portfolio" class="hover:text-gray-200">Portfolio</a></li>
-        <li><a href="#experience" data-i18n="nav_experience" class="hover:text-gray-200">Experience</a></li>
-        <li><a href="#webinar" data-i18n="nav_webinar" class="hover:text-gray-200">Webinars</a></li>
-        <li><a href="#contact" data-i18n="nav_contact" class="hover:text-gray-200">Contact</a></li>
-      </ul>
-      <!-- Right Controls -->
-      <div class="flex items-center space-x-4">
-        <button id="lang-toggle" class="px-4 py-2 bg-white bg-opacity-30 text-white rounded-lg hover:bg-opacity-50 transition">🇬🇧 EN</button>
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>  
+	<body class="bg-gradient-to-br from-purple-500 via-blue-400 to-green-300" data-lang="id">
+		<!-- Navbar -->
+		<nav
+			id="navbar"
+			class="bg-opacity-0 md:backdrop-blur-25 fixed top-0 left-0 z-30 w-full bg-white backdrop-blur-md backdrop-filter transition-all duration-300"
+		>
+			<div class="container mx-auto flex items-center justify-between px-8 py-4">
+				<!-- Logo -->
+				<div class="text-2xl font-bold text-white">Yogi Anggara</div>
+				<!-- Menu Links -->
+				<ul
+					id="menu"
+					class="bg-opacity-0 border-opacity-30 md:bg-opacity-0 absolute top-20 right-8 left-8 hidden scale-95 transform flex-col space-y-4 rounded-lg border border-white bg-white p-6 text-white opacity-0 backdrop-blur-md transition-all duration-300 ease-in-out md:static md:flex md:scale-100 md:flex-row md:space-y-0 md:space-x-8 md:border-none md:bg-none md:p-0 md:opacity-100 md:backdrop-blur-none"
+				>
+					<li><a href="#home" data-i18n="nav_home" class="hover:text-gray-200">Home</a></li>
+					<li><a href="#about" data-i18n="nav_about" class="hover:text-gray-200">About</a></li>
+					<li>
+						<a href="#portfolio" data-i18n="nav_portfolio" class="hover:text-gray-200">Portfolio</a>
+					</li>
+					<li>
+						<a href="#experience" data-i18n="nav_experience" class="hover:text-gray-200"
+							>Experience</a
+						>
+					</li>
+					<li>
+						<a href="#webinar" data-i18n="nav_webinar" class="hover:text-gray-200">Webinars</a>
+					</li>
+					<li>
+						<a href="#contact" data-i18n="nav_contact" class="hover:text-gray-200">Contact</a>
+					</li>
+				</ul>
+				<!-- Right Controls -->
+				<div class="flex items-center space-x-4">
+					<button
+						id="lang-toggle"
+						class="bg-opacity-30 hover:bg-opacity-50 rounded-lg bg-white px-4 py-2 text-white transition"
+					>
+						🇬🇧 EN
+					</button>
+					<button id="menu-btn" class="text-white focus:outline-none md:hidden">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-8 w-8"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center px-6 relative z-10" data-aos="fade-up">
-    <div class="relative max-w-4xl w-full">
-      <div class="relative overflow-hidden bg-white bg-opacity-10 border border-white border-opacity-30 backdrop-blur-2xl drop-shadow-xl rounded-3xl p-14">
-        <div class="absolute inset-0 bg-white bg-opacity-5 backdrop-blur-3xl"></div>
-        <div class="relative flex flex-col md:flex-row items-center gap-8">
-          <div class="md:w-1/2 text-center md:text-left z-10" data-aos="fade-right">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white" data-i18n="hero_title">Hello, I am<br><span class="text-purple-200">Yogi Anggara</span></h1>
-            <p class="mt-4 text-white opacity-90" data-i18n="hero_subtitle">Mobile | Frontend | Backend | Machine Learning</p>
-            <div class="mt-6 flex justify-center md:justify-start space-x-4">
-              <a href="#contact" class="px-6 py-3 bg-purple-200 bg-opacity-30 text-white rounded-lg hover:bg-opacity-50" data-i18n="hero_contact">Contact Me</a>
-              <a href="https://docs.google.com/document/d/10t6gWwxW89i5eCzFBttycsufMOBY9WG7ryTPqQndETY/edit?usp=sharing" target="_blank" class="px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-purple-700" data-i18n="hero_cv">Download CV</a>
-            </div>
-          </div>
-          <div class="md:w-1/2 flex justify-center z-10" data-aos="fade-left">
-            <div class="relative w-64 h-64">
-              <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-2xl rounded-full"></div>
-              <img src="src/profile.jpeg" alt="Your Photo" class="relative w-full h-full object-cover rounded-full border-2 border-white drop-shadow-lg">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+		<!-- Hero Section -->
+		<section
+			id="home"
+			class="relative z-10 flex min-h-screen items-center justify-center px-6"
+			data-aos="fade-up"
+		>
+			<div class="relative w-full max-w-4xl">
+				<div
+					class="bg-opacity-10 border-opacity-30 relative overflow-hidden rounded-3xl border border-white bg-white p-14 drop-shadow-xl backdrop-blur-2xl"
+				>
+					<div class="bg-opacity-5 absolute inset-0 bg-white backdrop-blur-3xl"></div>
+					<div class="relative flex flex-col items-center gap-8 md:flex-row">
+						<div class="z-10 text-center md:w-1/2 md:text-left" data-aos="fade-right">
+							<h1 class="text-5xl font-extrabold text-white md:text-6xl" data-i18n="hero_title">
+								Hello, I am<br /><span class="text-purple-200">Yogi Anggara</span>
+							</h1>
+							<p class="mt-4 text-white opacity-90" data-i18n="hero_subtitle">
+								Mobile | Frontend | Backend | Machine Learning
+							</p>
+							<div class="mt-6 flex justify-center space-x-4 md:justify-start">
+								<a
+									href="#contact"
+									class="bg-opacity-30 hover:bg-opacity-50 rounded-lg bg-purple-200 px-6 py-3 text-white"
+									data-i18n="hero_contact"
+									>Contact Me</a
+								>
+								<a
+									href="https://docs.google.com/document/d/10t6gWwxW89i5eCzFBttycsufMOBY9WG7ryTPqQndETY/edit?usp=sharing"
+									target="_blank"
+									class="rounded-lg border border-white px-6 py-3 text-white hover:bg-white hover:text-purple-700"
+									data-i18n="hero_cv"
+									>Download CV</a
+								>
+							</div>
+						</div>
+						<div class="z-10 flex justify-center md:w-1/2" data-aos="fade-left">
+							<div class="relative h-64 w-64">
+								<div
+									class="bg-opacity-10 absolute inset-0 rounded-full bg-white backdrop-blur-2xl"
+								></div>
+								<img
+									src="src/profile.jpeg"
+									alt="Your Photo"
+									class="relative h-full w-full rounded-full border-2 border-white object-cover drop-shadow-lg"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  <!-- About Section -->
-   <!-- About Section -->
-   <section id="about" class="py-20 px-6 bg-white bg-opacity-10 backdrop-blur-md border-t border-white border-opacity-20" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-white mb-4">About Me</h2>
-      <p class="leading-relaxed text-white/90 mb-6" data-aos="fade-up" data-aos-delay="100">
-        I'm a programmer passionate about building scalable, high-quality applications across web and mobile platforms. I focus on designing clean and maintainable architectures, setting up automated CI/CD pipelines, and ensuring code quality through thorough reviews and testing.
-        With experience across the full stack, I enjoy solving complex problems, improving system performance, and collaborating with teams to deliver solutions that not only meet technical requirements but also drive real business value.
-      </p>
-      <!-- Feature Highlights -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
-          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-white/80">Java Spring Boot</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
-          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-white/80">Flutter & Dart</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
-          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-white/80">JavaScript & Web Development</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
-          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-white/80">Microservices Architecture</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl hover:bg-opacity-20 transition">
-          <svg class="w-6 h-6 text-purple-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-          <span class="text-white/80">CI/CD & DevOps Practices</span>
-        </div>
-      </div>
-      <!-- /Feature Highlights -->
-    </div>
-  </section>
+		<!-- About Section -->
+		<!-- About Section -->
+		<section
+			id="about"
+			class="bg-opacity-10 border-opacity-20 border-t border-white bg-white px-6 py-20 backdrop-blur-md"
+			data-aos="fade-up"
+		>
+			<div class="mx-auto max-w-3xl text-center">
+				<h2 class="mb-4 text-4xl font-bold text-white">About Me</h2>
+				<p class="mb-6 leading-relaxed text-white/90" data-aos="fade-up" data-aos-delay="100">
+					I'm a programmer passionate about building scalable, high-quality applications across web
+					and mobile platforms. I focus on designing clean and maintainable architectures, setting
+					up automated CI/CD pipelines, and ensuring code quality through thorough reviews and
+					testing. With experience across the full stack, I enjoy solving complex problems,
+					improving system performance, and collaborating with teams to deliver solutions that not
+					only meet technical requirements but also drive real business value.
+				</p>
+				<!-- Feature Highlights -->
+				<div
+					class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+					data-aos="fade-up"
+					data-aos-delay="200"
+				>
+					<div
+						class="bg-opacity-10 hover:bg-opacity-20 flex items-start space-x-3 rounded-xl bg-white p-4 backdrop-blur-lg transition"
+					>
+						<svg
+							class="h-6 w-6 flex-shrink-0 text-purple-200"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path d="M5 13l4 4L19 7" />
+						</svg>
+						<span class="text-white/80">Java Spring Boot</span>
+					</div>
+					<div
+						class="bg-opacity-10 hover:bg-opacity-20 flex items-start space-x-3 rounded-xl bg-white p-4 backdrop-blur-lg transition"
+					>
+						<svg
+							class="h-6 w-6 flex-shrink-0 text-purple-200"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path d="M5 13l4 4L19 7" />
+						</svg>
+						<span class="text-white/80">Flutter & Dart</span>
+					</div>
+					<div
+						class="bg-opacity-10 hover:bg-opacity-20 flex items-start space-x-3 rounded-xl bg-white p-4 backdrop-blur-lg transition"
+					>
+						<svg
+							class="h-6 w-6 flex-shrink-0 text-purple-200"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path d="M5 13l4 4L19 7" />
+						</svg>
+						<span class="text-white/80">JavaScript & Web Development</span>
+					</div>
+					<div
+						class="bg-opacity-10 hover:bg-opacity-20 flex items-start space-x-3 rounded-xl bg-white p-4 backdrop-blur-lg transition"
+					>
+						<svg
+							class="h-6 w-6 flex-shrink-0 text-purple-200"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path d="M5 13l4 4L19 7" />
+						</svg>
+						<span class="text-white/80">Microservices Architecture</span>
+					</div>
+					<div
+						class="bg-opacity-10 hover:bg-opacity-20 flex items-start space-x-3 rounded-xl bg-white p-4 backdrop-blur-lg transition"
+					>
+						<svg
+							class="h-6 w-6 flex-shrink-0 text-purple-200"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path d="M5 13l4 4L19 7" />
+						</svg>
+						<span class="text-white/80">CI/CD & DevOps Practices</span>
+					</div>
+				</div>
+				<!-- /Feature Highlights -->
+			</div>
+		</section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-20 px-6" data-aos="fade-up" data-aos-delay="200">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-white text-center mb-12" data-i18n="portfolio_title">Portfolio</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project Card 1 -->
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://play-lh.googleusercontent.com/48_qSFJtbwjzRR06VOoH7jYTDXh1VzOVSo-rGf8sDeqgmKih1B_OcFPKRq8hEpHw2gE=w5120-h2880-rw" alt="HKI Apps" class="h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj2_title">HKI Apps</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj1_desc">Developed a mobile ERP app covering attendance, document disposition, leave requests, project field reporting, and quality control for an infrastructure company. Supports both administrative and technical operations to streamline workflows.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.hkinfrastruktur.app&hl=id" target="_blank" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj1_link">Go to Repository →</a>
-        </div>
-        <!-- Project Card 2 -->
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="350">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://play-lh.googleusercontent.com/sRpiNp8Y9dYIkILF8T-zJCpoJMMnGe2nAjRQEw9IOYRboLtjfEJKrIIuMomA0PdFvDk=w5120-h2880-rw" alt="Sys Matrica" class="h-64  relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">Sys Matrica</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj2_desc">Developed an internal mobile application for PT. Matrica Consulting Service to streamline employee activities, enhancing operational efficiency and facilitating daily workflows.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.sysmatrica.app&hl=id" target="_blank" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj2_link">Go to Repository →</a>
-        </div>
-        <!-- Project Card 3 -->
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="250">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://user-images.githubusercontent.com/76767053/165685998-f523556b-7f11-4873-9173-272990a1a8dd.png" alt="BadminTop" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">BadminTop</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj3_desc">Developed a mobile app for easy badminton court reservations, allowing users to check availability and book courts seamlessly. Designed to simplify the court booking experience.</p>
-          <a href="https://github.com/YogiAnggara129/badmintop" target="_blank" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj3_link">Go to Repository →</a>
-        </div>
-        <!-- Other -->
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="250">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/5834437/cover_image/regular_1708x683/Untitled-2b3a5d6414ec7f1635c0e730f62bc92b.png" alt="BadminTop" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">Notification Engine for Banking</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj3_desc">Maintained and enhanced a notification engine handling SMS and email delivery, involving Kafka messaging, Oracle database operations, and Spring Boot services. Focused on solving migration issues, optimizing performance, and debugging complex production errors.</p>
-        </div>
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="250">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_n9nnkR7LErNduRdHPZfgUclblhACtU4LmTS4wduVA&s&ec=72940544" alt="BadminTop" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">Open Music API</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj3_desc">Developed a backend service for managing music data, with RESTful API endpoints and asynchronous task processing via RabbitMQ. Designed to support scalable, event-driven operations for music applications.</p>
-          <a href="https://github.com/YogiAnggara129/badmintop" target="_blank" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj3_link">Go to Repository →</a>
-        </div>
-        <div class="relative backdrop-filter backdrop-blur-3xl bg-white bg-opacity-20 ring-1 ring-white ring-opacity-20 drop-shadow-2xl border border-white border-opacity-20 rounded-2xl p-6 overflow-hidden" data-aos="zoom-in" data-aos-delay="250">
-          <div class="absolute inset-0 bg-white bg-opacity-10 backdrop-blur-xl z-0"></div>
-          <img src="https://m.economictimes.com/thumb/msid-80050628,width-1200,height-900,resizemode-4,imgsize-155220/etf-portfolio.jpg" alt="Portfolio Optimization" class="w-64 h-64 relative z-10 rounded-lg mb-4 w-full object-cover">
-          <h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj4_title">Portfolio Optimization (Bibit)</h3>
-          <p class="relative z-10 text-white mt-2" data-i18n="proj4_desc">Built a portfolio optimization model using historical mutual fund data to maximize expected returns under defined risk levels. Demonstrated skills in quantitative analysis, R, Python, and financial modeling.</p>
-          <a href="https://github.com/YogiAnggara129/portfolio-optimization-bibit" target="_blank" class="relative z-10 inline-block mt-4 text-purple-200 hover:underline" data-i18n="proj4_link">Go to Repository →</a>
-        </div>
-        
-      </div>
-    </div>
-    <!-- Lihat Selengkapnya Button -->
-    <div class="text-center mt-12" data-aos="fade-down">
-      <a href="https://www.linkedin.com/in/yogi-anggara/"
-        class="inline-block px-8 py-3 bg-purple-500 bg-opacity-75 text-white font-semibold rounded-full hover:bg-opacity-100 transition">
-        See More
-      </a>
-    </div>
-  </section>
+		<!-- Portfolio Section -->
+		<section id="portfolio" class="px-6 py-20" data-aos="fade-up" data-aos-delay="200">
+			<div class="mx-auto max-w-4xl">
+				<h2 class="mb-12 text-center text-4xl font-bold text-white" data-i18n="portfolio_title">
+					Portfolio
+				</h2>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+					<!-- Project Card 1 -->
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="300"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://play-lh.googleusercontent.com/48_qSFJtbwjzRR06VOoH7jYTDXh1VzOVSo-rGf8sDeqgmKih1B_OcFPKRq8hEpHw2gE=w5120-h2880-rw"
+							alt="HKI Apps"
+							class="relative z-10 mb-4 h-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj2_title">
+							HKI Apps
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj1_desc">
+							Developed a mobile ERP app covering attendance, document disposition, leave requests,
+							project field reporting, and quality control for an infrastructure company. Supports
+							both administrative and technical operations to streamline workflows.
+						</p>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.hkinfrastruktur.app&hl=id"
+							target="_blank"
+							class="relative z-10 mt-4 inline-block text-purple-200 hover:underline"
+							data-i18n="proj1_link"
+							>Go to Repository →</a
+						>
+					</div>
+					<!-- Project Card 2 -->
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="350"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://play-lh.googleusercontent.com/sRpiNp8Y9dYIkILF8T-zJCpoJMMnGe2nAjRQEw9IOYRboLtjfEJKrIIuMomA0PdFvDk=w5120-h2880-rw"
+							alt="Sys Matrica"
+							class="relative z-10 mb-4 h-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">
+							Sys Matrica
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj2_desc">
+							Developed an internal mobile application for PT. Matrica Consulting Service to
+							streamline employee activities, enhancing operational efficiency and facilitating
+							daily workflows.
+						</p>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.sysmatrica.app&hl=id"
+							target="_blank"
+							class="relative z-10 mt-4 inline-block text-purple-200 hover:underline"
+							data-i18n="proj2_link"
+							>Go to Repository →</a
+						>
+					</div>
+					<!-- Project Card 3 -->
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="250"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://user-images.githubusercontent.com/76767053/165685998-f523556b-7f11-4873-9173-272990a1a8dd.png"
+							alt="BadminTop"
+							class="relative z-10 mb-4 h-64 w-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">
+							BadminTop
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj3_desc">
+							Developed a mobile app for easy badminton court reservations, allowing users to check
+							availability and book courts seamlessly. Designed to simplify the court booking
+							experience.
+						</p>
+						<a
+							href="https://github.com/YogiAnggara129/badmintop"
+							target="_blank"
+							class="relative z-10 mt-4 inline-block text-purple-200 hover:underline"
+							data-i18n="proj3_link"
+							>Go to Repository →</a
+						>
+					</div>
+					<!-- Other -->
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="250"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/5834437/cover_image/regular_1708x683/Untitled-2b3a5d6414ec7f1635c0e730f62bc92b.png"
+							alt="BadminTop"
+							class="relative z-10 mb-4 h-64 w-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">
+							Notification Engine for Banking
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj3_desc">
+							Maintained and enhanced a notification engine handling SMS and email delivery,
+							involving Kafka messaging, Oracle database operations, and Spring Boot services.
+							Focused on solving migration issues, optimizing performance, and debugging complex
+							production errors.
+						</p>
+					</div>
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="250"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc_n9nnkR7LErNduRdHPZfgUclblhACtU4LmTS4wduVA&s&ec=72940544"
+							alt="BadminTop"
+							class="relative z-10 mb-4 h-64 w-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj3_title">
+							Open Music API
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj3_desc">
+							Developed a backend service for managing music data, with RESTful API endpoints and
+							asynchronous task processing via RabbitMQ. Designed to support scalable, event-driven
+							operations for music applications.
+						</p>
+						<a
+							href="https://github.com/YogiAnggara129/badmintop"
+							target="_blank"
+							class="relative z-10 mt-4 inline-block text-purple-200 hover:underline"
+							data-i18n="proj3_link"
+							>Go to Repository →</a
+						>
+					</div>
+					<div
+						class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+						data-aos="zoom-in"
+						data-aos-delay="250"
+					>
+						<div class="bg-opacity-10 absolute inset-0 z-0 bg-white backdrop-blur-xl"></div>
+						<img
+							src="https://m.economictimes.com/thumb/msid-80050628,width-1200,height-900,resizemode-4,imgsize-155220/etf-portfolio.jpg"
+							alt="Portfolio Optimization"
+							class="relative z-10 mb-4 h-64 w-64 w-full rounded-lg object-cover"
+						/>
+						<h3 class="relative z-10 text-2xl font-semibold text-white" data-i18n="proj4_title">
+							Portfolio Optimization (Bibit)
+						</h3>
+						<p class="relative z-10 mt-2 text-white" data-i18n="proj4_desc">
+							Built a portfolio optimization model using historical mutual fund data to maximize
+							expected returns under defined risk levels. Demonstrated skills in quantitative
+							analysis, R, Python, and financial modeling.
+						</p>
+						<a
+							href="https://github.com/YogiAnggara129/portfolio-optimization-bibit"
+							target="_blank"
+							class="relative z-10 mt-4 inline-block text-purple-200 hover:underline"
+							data-i18n="proj4_link"
+							>Go to Repository →</a
+						>
+					</div>
+				</div>
+			</div>
+			<!-- Lihat Selengkapnya Button -->
+			<div class="mt-12 text-center" data-aos="fade-down">
+				<a
+					href="https://www.linkedin.com/in/yogi-anggara/"
+					class="bg-opacity-75 hover:bg-opacity-100 inline-block rounded-full bg-purple-500 px-8 py-3 font-semibold text-white transition"
+				>
+					See More
+				</a>
+			</div>
+		</section>
 
-  <!-- Experience Section -->
-  <!-- Experience Section Start -->
-  <section id="experience" class="pt-36 pb-32 bg-slate-700" data-aos="fade-up">
-    <div class="container mx-auto px-6">
-      <!-- Header -->
-      <div class="max-w-xl mx-auto text-center mb-16" data-aos="fade-down" data-aos-delay="100">
-        <h4 class="font-semibold text-lg text-purple-200 mb-2">Experience</h4>
-        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">My Latest Journey</h2>
-        <p class="font-medium text-md text-gray-400 md:text-lg">A look into my recent experiences and adventures in the tech industry.</p>
-      </div>
-      <!-- Timeline List -->
-      <ol class="relative">
-        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">Januari 2025 - Sekarang</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Fullstack Engineer</h3>
-            <h4 class="text-base font-semibold text-gray-200">Digital Exceleration Nusantara</h4>
-            <p class="mt-4 text-gray-400">Responsible for developing and maintaining banking projects, leveraging microservice architecture to improve scalability and system performance.</p>
-          </div>
-        </li>
-        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">Januari - Desember 2024</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
-            <h4 class="text-base font-semibold text-gray-200">Matrica Consulting Service</h4>
-            <p class="mt-4 text-gray-400">Mobile Developer specializing in implementing Odoo modules into mobile applications using Flutter, developing REST APIs for integration with the Odoo system, building unit tests for feature validation, implementing CI/CD pipelines via GitLab CI, and maintaining applications through regular debugging, bug fixing, and updates.</p>
-          </div>
-        </li>
-        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">Juli - Desember 2023</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
-            <h4 class="text-base font-semibold text-gray-200">Terralogiq</h4>
-            <p class="mt-4 text-gray-400">Mobile Developer responsible for maintaining and developing the Tapera Mobile application with advanced security features, developing PIC Bank applications for financing monitoring, building applications for housing developers, providing post-launch technical support, and ensuring AI feature integrations.</p>
-          </div>
-        </li>
-        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">Januari - Juni 2023</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Frontend Developer Freelance</h3>
-            <h4 class="text-base font-semibold text-gray-200">Tema Data Rekayasa Digital</h4>
-            <p class="mt-4 text-gray-400">Frontend Developer tasked with developing a web-based learning management system for multiple user roles (coach, student, admin), integrating file and video conference-based learning methods, and designing user-friendly interfaces to maximize platform adoption.</p>
-          </div>
-        </li>
-        <li class="pb-10 border-l border-gray-600" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">September 2022 - Maret 2023</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Mobile Developer</h3>
-            <h4 class="text-base font-semibold text-gray-200">Solusi Digital Industri</h4>
-            <p class="mt-4 text-gray-400">Mobile Developer responsible for building freelance platform applications and online payment services, implementing data streaming and push notifications, conducting testing and debugging, and maintaining high system reliability through close teamwork.</p>
-          </div>
-        </li>
-        <li class="pb-10" data-aos="fade-right" data-aos-delay="150">
-          <span class="absolute w-4 h-4 bg-purple-200 rounded-full mt-1.5 -left-2 border-2 border-slate-700"></span>
-          <div class="ml-6 bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl hover:bg-opacity-20 transition">
-            <time class="block text-sm text-gray-300">Februari – April 2021</time>
-            <h3 class="text-xl font-semibold text-white mt-2">Data Engineer Internship</h3>
-            <h4 class="text-base font-semibold text-gray-200">Xeratic</h4>
-            <p class="mt-4 text-gray-400">Data Engineer Intern performing data transformations using Pentaho, developing R scripts for data manipulation and statistical analysis, and receiving recognition for consumer-oriented performance.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-    <!-- Lihat Selengkapnya Button -->
-    <div class="text-center mt-12" data-aos="fade-down">
-      <a href="https://www.linkedin.com/in/yogi-anggara/"
-        class="inline-block px-8 py-3 bg-purple-500 bg-opacity-75 text-white font-semibold rounded-full hover:bg-opacity-100 transition">
-        See More
-      </a>
-    </div>
-  </section>
-  <!-- Experience Section End -->
+		<!-- Experience Section -->
+		<!-- Experience Section Start -->
+		<section id="experience" class="bg-slate-700 pt-36 pb-32" data-aos="fade-up">
+			<div class="container mx-auto px-6">
+				<!-- Header -->
+				<div class="mx-auto mb-16 max-w-xl text-center" data-aos="fade-down" data-aos-delay="100">
+					<h4 class="mb-2 text-lg font-semibold text-purple-200">Experience</h4>
+					<h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+						My Latest Journey
+					</h2>
+					<p class="text-md font-medium text-gray-400 md:text-lg">
+						A look into my recent experiences and adventures in the tech industry.
+					</p>
+				</div>
+				<!-- Timeline List -->
+				<ol class="relative">
+					<li class="border-l border-gray-600 pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">Januari 2025 - Sekarang</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Fullstack Engineer</h3>
+							<h4 class="text-base font-semibold text-gray-200">Digital Exceleration Nusantara</h4>
+							<p class="mt-4 text-gray-400">
+								Responsible for developing and maintaining banking projects, leveraging microservice
+								architecture to improve scalability and system performance.
+							</p>
+						</div>
+					</li>
+					<li class="border-l border-gray-600 pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">Januari - Desember 2024</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
+							<h4 class="text-base font-semibold text-gray-200">Matrica Consulting Service</h4>
+							<p class="mt-4 text-gray-400">
+								Mobile Developer specializing in implementing Odoo modules into mobile applications
+								using Flutter, developing REST APIs for integration with the Odoo system, building
+								unit tests for feature validation, implementing CI/CD pipelines via GitLab CI, and
+								maintaining applications through regular debugging, bug fixing, and updates.
+							</p>
+						</div>
+					</li>
+					<li class="border-l border-gray-600 pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">Juli - Desember 2023</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
+							<h4 class="text-base font-semibold text-gray-200">Terralogiq</h4>
+							<p class="mt-4 text-gray-400">
+								Mobile Developer responsible for maintaining and developing the Tapera Mobile
+								application with advanced security features, developing PIC Bank applications for
+								financing monitoring, building applications for housing developers, providing
+								post-launch technical support, and ensuring AI feature integrations.
+							</p>
+						</div>
+					</li>
+					<li class="border-l border-gray-600 pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">Januari - Juni 2023</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Frontend Developer Freelance</h3>
+							<h4 class="text-base font-semibold text-gray-200">Tema Data Rekayasa Digital</h4>
+							<p class="mt-4 text-gray-400">
+								Frontend Developer tasked with developing a web-based learning management system for
+								multiple user roles (coach, student, admin), integrating file and video
+								conference-based learning methods, and designing user-friendly interfaces to
+								maximize platform adoption.
+							</p>
+						</div>
+					</li>
+					<li class="border-l border-gray-600 pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">September 2022 - Maret 2023</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
+							<h4 class="text-base font-semibold text-gray-200">Solusi Digital Industri</h4>
+							<p class="mt-4 text-gray-400">
+								Mobile Developer responsible for building freelance platform applications and online
+								payment services, implementing data streaming and push notifications, conducting
+								testing and debugging, and maintaining high system reliability through close
+								teamwork.
+							</p>
+						</div>
+					</li>
+					<li class="pb-10" data-aos="fade-right" data-aos-delay="150">
+						<span
+							class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
+						></span>
+						<div
+							class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+						>
+							<time class="block text-sm text-gray-300">Februari – April 2021</time>
+							<h3 class="mt-2 text-xl font-semibold text-white">Data Engineer Internship</h3>
+							<h4 class="text-base font-semibold text-gray-200">Xeratic</h4>
+							<p class="mt-4 text-gray-400">
+								Data Engineer Intern performing data transformations using Pentaho, developing R
+								scripts for data manipulation and statistical analysis, and receiving recognition
+								for consumer-oriented performance.
+							</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+			<!-- Lihat Selengkapnya Button -->
+			<div class="mt-12 text-center" data-aos="fade-down">
+				<a
+					href="https://www.linkedin.com/in/yogi-anggara/"
+					class="bg-opacity-75 hover:bg-opacity-100 inline-block rounded-full bg-purple-500 px-8 py-3 font-semibold text-white transition"
+				>
+					See More
+				</a>
+			</div>
+		</section>
+		<!-- Experience Section End -->
 
+		<!-- Webinar Section -->
+		<section
+			id="webinar"
+			class="bg-opacity-10 bg-white px-6 py-20 backdrop-blur-md"
+			data-aos="fade-up"
+			data-aos-delay="350"
+		>
+			<div class="mx-auto max-w-4xl text-center text-white">
+				<h2 class="mb-8 text-4xl font-bold">Webinar</h2>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<iframe
+						src="https://www.youtube.com/embed/NPbsAhVJVzE?si=tgRRs3YnTGcYiQaJ"
+						class="aspect-video w-full rounded-xl"
+						data-aos="zoom-in"
+						data-aos-delay="400"
+					></iframe>
+					<iframe
+						src="https://drive.google.com/file/d/1JAMa-aM8fapBoYBukrBuRF0htmnjNlNy/preview"
+						class="aspect-video w-full rounded-xl"
+						data-aos="zoom-in"
+						data-aos-delay="400"
+					></iframe>
+					<iframe
+						src="https://www.youtube.com/embed/8z3aekPPKrQ"
+						class="aspect-video w-full rounded-xl"
+						data-aos="zoom-in"
+						data-aos-delay="450"
+					></iframe>
+					<iframe
+						src="https://www.youtube.com/embed/8z3aekPPKrQ"
+						class="aspect-video w-full rounded-xl"
+						data-aos="zoom-in"
+						data-aos-delay="450"
+					></iframe>
+				</div>
+			</div>
+		</section>
 
-  <!-- Webinar Section -->
-  <section id="webinar" class="py-20 px-6 bg-white bg-opacity-10 backdrop-blur-md" data-aos="fade-up" data-aos-delay="350">
-    <div class="max-w-4xl mx-auto text-center text-white">
-      <h2 class="text-4xl font-bold mb-8">Webinar</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <iframe src="https://www.youtube.com/embed/NPbsAhVJVzE?si=tgRRs3YnTGcYiQaJ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="400"></iframe>
-        <iframe src="https://drive.google.com/file/d/1JAMa-aM8fapBoYBukrBuRF0htmnjNlNy/preview" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="400"></iframe>
-        <iframe src="https://www.youtube.com/embed/8z3aekPPKrQ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="450"></iframe>
-        <iframe src="https://www.youtube.com/embed/8z3aekPPKrQ" class="w-full aspect-video rounded-xl" data-aos="zoom-in" data-aos-delay="450"></iframe>
-      </div>
-    </div>
-  </section>
+		<!-- Contact Section -->
+		<section id="contact" class="px-6 py-20" data-aos="fade-up" data-aos-delay="650">
+			<div
+				class="bg-opacity-10 border-opacity-20 mx-auto max-w-xl rounded-2xl border border-white bg-white p-8 backdrop-blur-lg backdrop-filter"
+			>
+				<h2 class="mb-6 text-center text-3xl font-bold text-white" data-i18n="contact_title">
+					Contact Me
+				</h2>
+				<form id="contact-form" class="space-y-4">
+					<input
+						id="name"
+						type="text"
+						placeholder="Name"
+						data-i18n-placeholder="contact_name"
+						class="bg-opacity-30 w-full rounded-lg bg-white p-3 text-white placeholder-white focus:outline-none"
+					/>
+					<input
+						id="email"
+						type="email"
+						placeholder="Email"
+						data-i18n-placeholder="contact_email"
+						class="bg-opacity-30 w-full rounded-lg bg-white p-3 text-white placeholder-white focus:outline-none"
+					/>
+					<textarea
+						id="msg"
+						rows="4"
+						placeholder="Message"
+						data-i18n-placeholder="contact_message"
+						class="bg-opacity-30 w-full rounded-lg bg-white p-3 text-white placeholder-white focus:outline-none"
+					></textarea>
+					<button
+						type="submit"
+						class="bg-opacity-30 hover:bg-opacity-50 w-full rounded-lg bg-purple-200 py-3 text-white transition"
+						data-i18n="contact_button"
+					>
+						Send Message
+					</button>
+				</form>
+			</div>
+		</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6" data-aos="fade-up" data-aos-delay="650">
-    <div class="max-w-xl mx-auto backdrop-filter backdrop-blur-lg bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl p-8">
-      <h2 class="text-3xl text-white font-bold mb-6 text-center" data-i18n="contact_title">Contact Me</h2>
-      <form id="contact-form" class="space-y-4">
-        <input id="name" type="text" placeholder="Name" data-i18n-placeholder="contact_name" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none" />
-        <input id="email" type="email" placeholder="Email" data-i18n-placeholder="contact_email" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none" />
-        <textarea id="msg" rows="4" placeholder="Message" data-i18n-placeholder="contact_message" class="w-full p-3 rounded-lg bg-white bg-opacity-30 text-white placeholder-white focus:outline-none"></textarea>
-        <button type="submit" class="w-full py-3 bg-purple-200 bg-opacity-30 text-white rounded-lg hover:bg-opacity-50 transition" data-i18n="contact_button">Send Message</button>
-      </form>
-    </div>
-  </section>
+		<!-- Footer -->
+		<footer
+			class="relative overflow-hidden bg-gradient-to-tr from-slate-800 to-slate-900 py-16 text-white"
+			data-aos="fade-up"
+			data-aos-delay="750"
+		>
+			<div
+				class="absolute inset-0 bg-gradient-to-br from-purple-700 to-blue-500 opacity-20 mix-blend-overlay"
+			></div>
+			<div class="relative mx-auto max-w-4xl px-6">
+				<h3 class="mb-6 text-center text-3xl font-bold">Thank you for visiting!</h3>
+				<p class="mb-10 text-center text-gray-300">
+					Let's connect and build something amazing together 🚀
+				</p>
 
-  <!-- Footer -->
-  <footer class="relative py-16 bg-gradient-to-tr from-slate-800 to-slate-900 text-white overflow-hidden" data-aos="fade-up" data-aos-delay="750">
-    <div class="absolute inset-0 opacity-20 bg-gradient-to-br from-purple-700 to-blue-500 mix-blend-overlay"></div>
-    <div class="relative max-w-4xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-6">Thank you for visiting!</h3>
-      <p class="text-center text-gray-300 mb-10">Let's connect and build something amazing together 🚀</p>
-  
-      <div class="flex justify-center space-x-6 mb-10">
-        <a href="mailto:yogianggara129@gmail.com" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.01 4.992A2 2 0 014 3h16a2 2 0 011.99 1.992L12 13 2.01 4.992z" />
-            <path d="M22 6.327v11.177A2 2 0 0120 19H4a2 2 0 01-2-2V6.327l10 8.2 10-8.2z" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/yogi-anggara" target="_blank" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11.75 20h-2.5v-9h2.5v9zm-1.25-10.3a1.45 1.45 0 110-2.9 1.45 1.45 0 010 2.9zm13 10.3h-2.5v-4.5c0-1.1-.4-1.8-1.3-1.8s-1.5.8-1.5 1.8v4.5h-2.5v-9h2.5v1.2c.5-.8 1.4-1.2 2.3-1.2 2.1 0 3.5 1.4 3.5 3.8v5.2z"/>          
-          </svg>
-        </a>
-        <a href="https://github.com/YogiAnggara129" target="_blank" class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.153-1.11-1.461-1.11-1.461-.908-.62.069-.607.069-.607 1.004.07 1.532 1.032 1.532 1.032.892 1.529 2.341 1.087 2.91.832.091-.647.35-1.087.636-1.337-2.22-.253-4.555-1.111-4.555-4.944 0-1.091.39-1.984 1.029-2.681-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.563 9.563 0 0112 6.844c.851.004 1.705.115 2.504.338 1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.099 2.647.64.697 1.028 1.59 1.028 2.681 0 3.841-2.337 4.688-4.566 4.937.36.309.679.917.679 1.852 0 1.337-.012 2.418-.012 2.747 0 .269.18.58.688.481C19.135 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-  
-      <p class="text-center text-gray-400 mb-6 text-sm">Passionate about building impactful digital products 🌎</p>
-      <p class="text-center text-gray-500 text-sm">&copy; 2025 Yogi Anggara. All rights reserved.</p>
-    </div>
-  </footer>
-  
+				<div class="mb-10 flex justify-center space-x-6">
+					<a
+						href="mailto:yogianggara129@gmail.com"
+						class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
+					>
+						<svg
+							class="h-6 w-6 text-white"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path d="M2.01 4.992A2 2 0 014 3h16a2 2 0 011.99 1.992L12 13 2.01 4.992z" />
+							<path d="M22 6.327v11.177A2 2 0 0120 19H4a2 2 0 01-2-2V6.327l10 8.2 10-8.2z" />
+						</svg>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/yogi-anggara"
+						target="_blank"
+						class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
+					>
+						<svg
+							class="h-6 w-6 text-white"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11.75 20h-2.5v-9h2.5v9zm-1.25-10.3a1.45 1.45 0 110-2.9 1.45 1.45 0 010 2.9zm13 10.3h-2.5v-4.5c0-1.1-.4-1.8-1.3-1.8s-1.5.8-1.5 1.8v4.5h-2.5v-9h2.5v1.2c.5-.8 1.4-1.2 2.3-1.2 2.1 0 3.5 1.4 3.5 3.8v5.2z"
+							/>
+						</svg>
+					</a>
+					<a
+						href="https://github.com/YogiAnggara129"
+						target="_blank"
+						class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
+					>
+						<svg
+							class="h-6 w-6 text-white"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.153-1.11-1.461-1.11-1.461-.908-.62.069-.607.069-.607 1.004.07 1.532 1.032 1.532 1.032.892 1.529 2.341 1.087 2.91.832.091-.647.35-1.087.636-1.337-2.22-.253-4.555-1.111-4.555-4.944 0-1.091.39-1.984 1.029-2.681-.103-.253-.447-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.563 9.563 0 0112 6.844c.851.004 1.705.115 2.504.338 1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.394.099 2.647.64.697 1.028 1.59 1.028 2.681 0 3.841-2.337 4.688-4.566 4.937.36.309.679.917.679 1.852 0 1.337-.012 2.418-.012 2.747 0 .269.18.58.688.481C19.135 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+					</a>
+				</div>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
+				<p class="mb-6 text-center text-sm text-gray-400">
+					Passionate about building impactful digital products 🌎
+				</p>
+				<p class="text-center text-sm text-gray-500">
+					&copy; 2025 Yogi Anggara. All rights reserved.
+				</p>
+			</div>
+		</footer>
 
-    // const translations = {
-    //   en: {
-    //     nav_home: 'Home', nav_about: 'About', nav_portfolio: 'Portfolio', nav_experience: 'Experience', nav_webinar: 'Webinars', nav_contact: 'Contact',
-    //     hero_title: 'Hello, I am<br><span class="text-purple-200">Yogi Anggara</span>',
-    //     hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
-    //     hero_contact: 'Contact Me', hero_cv: 'Download CV',
-    //     about_title: 'About Me',
-    //     about_text: 'I have a background in Mathematics and have built mobile & web applications with Flutter since 2022. I enjoy solving complex problems, building CI/CD pipelines, and implementing clean architecture.',
-    //     portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Brief project description, tech stack, and key features.', proj1_link: 'View Repository →',
-    //     proj2_title: 'Project Two', proj2_desc: 'Brief description of another project.', proj2_link: 'View Repository →',
-    //     exp_title: 'Experience', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
-    //     exp2_title: 'Data Engineer Internship', exp2_time: 'February 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
-    //     webinar_title: 'Webinars',
-    //     contact_title: 'Contact Me', contact_name: 'Name', contact_email: 'Email', contact_message: 'Message', contact_button: 'Send Message',
-    //     footer_text: 'Made with <span class="text-pink-500">♥</span> by Yogi Anggara'
-    //   },
-    //   id: {
-    //     nav_home: 'Beranda', nav_about: 'Tentang', nav_portfolio: 'Portfolio', nav_experience: 'Pengalaman', nav_webinar: 'Webinar', nav_contact: 'Kontak',
-    //     hero_title: 'Halo, Saya<br><span class="text-purple-200">Yogi Anggara</span>', hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
-    //     hero_contact: 'Hubungi Saya', hero_cv: 'Download CV',
-    //     about_title: 'Tentang Saya', about_text: 'Saya memiliki latar belakang Matematika dan telah membangun aplikasi mobile & web dengan Flutter sejak 2022. Saya menikmati memecahkan masalah kompleks, membangun pipeline CI/CD, dan mengimplementasikan clean architecture.',
-    //     portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Deskripsi singkat project, tech stack, dan fitur utama.', proj1_link: 'Lihat Repository →',
-    //     proj2_title: 'Project Two', proj2_desc: 'Deskripsi singkat project lainnya.', proj2_link: 'Lihat Repository →',
-    //     exp_title: 'Pengalaman', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
-    //     exp2_title: 'Data Engineer Internship', exp2_time: 'Februari 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
-    //     webinar_title: 'Webinar',
-    //     contact_title: 'Kontak Saya', contact_name: 'Nama', contact_email: 'Email', contact_message: 'Pesan', contact_button: 'Kirim Pesan',
-    //     footer_text: 'Dibuat dengan <span class="text-pink-500">♥</span> oleh Yogi Anggara'
-    //   }
-    // };
+		<!-- Scripts -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({ duration: 800, once: true });
 
-    // function applyTranslations(lang) {
-    //   document.body.setAttribute('data-lang', lang);
-    //   document.querySelectorAll('[data-i18n]').forEach(el => {
-    //     const key = el.getAttribute('data-i18n');
-    //     if (translations[lang][key]) el.innerHTML = translations[lang][key];
-    //   });
-    //   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    //     const key = el.getAttribute('data-i18n-placeholder');
-    //     if (translations[lang][key]) el.placeholder = translations[lang][key];
-    //   });
-    //   document.getElementById('lang-toggle').textContent = lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN';
-    // }
+			// const translations = {
+			//   en: {
+			//     nav_home: 'Home', nav_about: 'About', nav_portfolio: 'Portfolio', nav_experience: 'Experience', nav_webinar: 'Webinars', nav_contact: 'Contact',
+			//     hero_title: 'Hello, I am<br><span class="text-purple-200">Yogi Anggara</span>',
+			//     hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
+			//     hero_contact: 'Contact Me', hero_cv: 'Download CV',
+			//     about_title: 'About Me',
+			//     about_text: 'I have a background in Mathematics and have built mobile & web applications with Flutter since 2022. I enjoy solving complex problems, building CI/CD pipelines, and implementing clean architecture.',
+			//     portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Brief project description, tech stack, and key features.', proj1_link: 'View Repository →',
+			//     proj2_title: 'Project Two', proj2_desc: 'Brief description of another project.', proj2_link: 'View Repository →',
+			//     exp_title: 'Experience', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
+			//     exp2_title: 'Data Engineer Internship', exp2_time: 'February 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
+			//     webinar_title: 'Webinars',
+			//     contact_title: 'Contact Me', contact_name: 'Name', contact_email: 'Email', contact_message: 'Message', contact_button: 'Send Message',
+			//     footer_text: 'Made with <span class="text-pink-500">♥</span> by Yogi Anggara'
+			//   },
+			//   id: {
+			//     nav_home: 'Beranda', nav_about: 'Tentang', nav_portfolio: 'Portfolio', nav_experience: 'Pengalaman', nav_webinar: 'Webinar', nav_contact: 'Kontak',
+			//     hero_title: 'Halo, Saya<br><span class="text-purple-200">Yogi Anggara</span>', hero_subtitle: 'Mobile | Frontend | Backend | Machine Learning',
+			//     hero_contact: 'Hubungi Saya', hero_cv: 'Download CV',
+			//     about_title: 'Tentang Saya', about_text: 'Saya memiliki latar belakang Matematika dan telah membangun aplikasi mobile & web dengan Flutter sejak 2022. Saya menikmati memecahkan masalah kompleks, membangun pipeline CI/CD, dan mengimplementasikan clean architecture.',
+			//     portfolio_title: 'Portfolio', proj1_title: 'Project One', proj1_desc: 'Deskripsi singkat project, tech stack, dan fitur utama.', proj1_link: 'Lihat Repository →',
+			//     proj2_title: 'Project Two', proj2_desc: 'Deskripsi singkat project lainnya.', proj2_link: 'Lihat Repository →',
+			//     exp_title: 'Pengalaman', exp1_title: 'Core Team | Machine Learning Path Developer', exp1_time: 'September 2021', exp1_desc: 'Google Developer Student Club UIN Sunan Kalijaga Yogyakarta.',
+			//     exp2_title: 'Data Engineer Internship', exp2_time: 'Februari 2021 – April 2021', exp2_desc: 'Xeratic Internship.',
+			//     webinar_title: 'Webinar',
+			//     contact_title: 'Kontak Saya', contact_name: 'Nama', contact_email: 'Email', contact_message: 'Pesan', contact_button: 'Kirim Pesan',
+			//     footer_text: 'Dibuat dengan <span class="text-pink-500">♥</span> oleh Yogi Anggara'
+			//   }
+			// };
 
-    // const userLang = navigator.language.toLowerCase();
-    // applyTranslations(userLang.startsWith('id') ? 'id' : 'en');
+			// function applyTranslations(lang) {
+			//   document.body.setAttribute('data-lang', lang);
+			//   document.querySelectorAll('[data-i18n]').forEach(el => {
+			//     const key = el.getAttribute('data-i18n');
+			//     if (translations[lang][key]) el.innerHTML = translations[lang][key];
+			//   });
+			//   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+			//     const key = el.getAttribute('data-i18n-placeholder');
+			//     if (translations[lang][key]) el.placeholder = translations[lang][key];
+			//   });
+			//   document.getElementById('lang-toggle').textContent = lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN';
+			// }
 
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-      const next = document.body.getAttribute('data-lang') === 'id' ? 'en' : 'id';
-      applyTranslations(next);
-    });
+			// const userLang = navigator.language.toLowerCase();
+			// applyTranslations(userLang.startsWith('id') ? 'id' : 'en');
 
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const menuLinks = menu.querySelectorAll('a');
+			document.getElementById('lang-toggle').addEventListener('click', () => {
+				const next = document.body.getAttribute('data-lang') === 'id' ? 'en' : 'id';
+				applyTranslations(next);
+			});
 
-    menuBtn.addEventListener('click', () => {
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        setTimeout(() => {
-          menu.classList.remove('scale-95', 'opacity-0');
-        }, 10);
-      } else {
-        menu.classList.add('scale-95', 'opacity-0');
-        setTimeout(() => {
-          menu.classList.add('hidden');
-        }, 300);
-      }
-    });
+			const menuBtn = document.getElementById('menu-btn');
+			const menu = document.getElementById('menu');
+			const menuLinks = menu.querySelectorAll('a');
 
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-          menu.classList.add('scale-95', 'opacity-0');
-          setTimeout(() => {
-            menu.classList.add('hidden');
-          }, 300);
-        }
-      });
-    });
+			menuBtn.addEventListener('click', () => {
+				if (menu.classList.contains('hidden')) {
+					menu.classList.remove('hidden');
+					setTimeout(() => {
+						menu.classList.remove('scale-95', 'opacity-0');
+					}, 10);
+				} else {
+					menu.classList.add('scale-95', 'opacity-0');
+					setTimeout(() => {
+						menu.classList.add('hidden');
+					}, 300);
+				}
+			});
 
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('navbar');
-      if (window.scrollY > 20) {
-        nav.classList.add('bg-opacity-20','shadow-md');
-      } else {
-        nav.classList.remove('bg-opacity-20','shadow-md');
-      }
-    });
+			menuLinks.forEach((link) => {
+				link.addEventListener('click', () => {
+					if (window.innerWidth < 768) {
+						menu.classList.add('scale-95', 'opacity-0');
+						setTimeout(() => {
+							menu.classList.add('hidden');
+						}, 300);
+					}
+				});
+			});
 
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-      e.preventDefault();
+			window.addEventListener('scroll', () => {
+				const nav = document.getElementById('navbar');
+				if (window.scrollY > 20) {
+					nav.classList.add('bg-opacity-20', 'shadow-md');
+				} else {
+					nav.classList.remove('bg-opacity-20', 'shadow-md');
+				}
+			});
 
-      const name  = encodeURIComponent(document.getElementById("name").value);
-      const email = encodeURIComponent(document.getElementById("email").value);
-      const msg   = encodeURIComponent(document.getElementById("msg").value);
+			document.getElementById('contact-form').addEventListener('submit', function (e) {
+				e.preventDefault();
 
-      const subject = encodeURIComponent("Pesan dari " + name);
-      const body    = encodeURIComponent(
-        "Nama: "  + name + "\n" +
-        "Email: " + email + "\n\n" +
-        msg
-      );
+				const name = encodeURIComponent(document.getElementById('name').value);
+				const email = encodeURIComponent(document.getElementById('email').value);
+				const msg = encodeURIComponent(document.getElementById('msg').value);
 
-      window.location.href = `mailto:yogianggara129@gmail.com?subject=${subject}&body=${body}`;
-    });
-  </script>
-</body>
+				const subject = encodeURIComponent('Pesan dari ' + name);
+				const body = encodeURIComponent('Nama: ' + name + '\n' + 'Email: ' + email + '\n\n' + msg);
+
+				window.location.href = `mailto:yogianggara129@gmail.com?subject=${subject}&body=${body}`;
+			});
+		</script>
+	</body>
 </html>
