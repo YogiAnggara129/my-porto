@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	import { m } from '$lib/paraglide/messages';
+	import type { SectionType } from '$lib/stores/navigation';
 	import { portfolioItems } from '$lib/stores/portfolio';
 	import PortfolioCard from './components/PortfolioCard.svelte';
+
+	const sectionType: SectionType = 'portfolio';
 </script>
 
-<section id="portfolio" class="px-6 py-20" data-aos="fade-up" data-aos-delay="200">
+<section id={sectionType} class="px-6 py-20" data-aos="fade-up" data-aos-delay="200">
 	<div class="mx-auto max-w-4xl">
 		<h2 class="mb-12 text-center text-4xl font-bold text-white" data-i18n="portfolio_title">
 			{m.portfolio__title()}

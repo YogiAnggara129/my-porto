@@ -12,8 +12,11 @@ export function setupScrollSpy({ activeSection, sectionItems }: Props) {
 
 	const observer = new IntersectionObserver(
 		(entries) => {
+			console.log(entries.length);
 			entries.forEach((entry) => {
+				console.log('before: ', entry.target.id, entry.isIntersecting);
 				if (entry.isIntersecting) {
+					console.log('after: ', entry.target.id);
 					activeSection.set(entry.target.id as SectionType);
 				}
 			});
@@ -23,8 +26,10 @@ export function setupScrollSpy({ activeSection, sectionItems }: Props) {
 
 	// Observasi semua section
 	sections.forEach((section) => {
+		console.log('obserbe: ', section);
 		const element = document.getElementById(section);
 		if (element) {
+			console.log('get element: ', element);
 			observer.observe(element);
 		}
 	});
@@ -53,7 +58,6 @@ export const isScrolled = writable(false);
 
 export function setupMenuBehavior() {
 	const toggleMenu = () => {
-		console.log('tesss');
 		isMenuOpen.update((v) => !v);
 	};
 

@@ -14,7 +14,9 @@
 	export const sectionItems: Record<SectionType, string> = {
 		home: m.nav__home(),
 		about: m.nav__about(),
-		portfolio: m.nav__portfolio()
+		portfolio: m.nav__portfolio(),
+		experience: m.nav__experience(),
+		contact: m.nav__contact()
 	};
 
 	let menu: ReturnType<typeof setupMenuBehavior>;
