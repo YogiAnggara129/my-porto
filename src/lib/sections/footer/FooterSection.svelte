@@ -1,3 +1,7 @@
+<script>
+	import FooterIcon from './components/FooterIcon.svelte';
+</script>
+
 <footer
 	class="relative overflow-hidden bg-gradient-to-tr from-slate-800 to-slate-900 py-16 text-white"
 	data-aos="fade-up"
@@ -13,10 +17,7 @@
 		</p>
 
 		<div class="mb-10 flex justify-center space-x-6">
-			<a
-				href="mailto:yogianggara129@gmail.com"
-				class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
-			>
+			<FooterIcon href="mailto:yogianggara129@gmail.com" label="Email">
 				<svg
 					class="h-6 w-6 text-white"
 					fill="currentColor"
@@ -26,12 +27,8 @@
 					<path d="M2.01 4.992A2 2 0 014 3h16a2 2 0 011.99 1.992L12 13 2.01 4.992z" />
 					<path d="M22 6.327v11.177A2 2 0 0120 19H4a2 2 0 01-2-2V6.327l10 8.2 10-8.2z" />
 				</svg>
-			</a>
-			<a
-				href="https://www.linkedin.com/in/yogi-anggara"
-				target="_blank"
-				class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
-			>
+			</FooterIcon>
+			<FooterIcon href="https://www.linkedin.com/in/yogi-anggara" target="_blank" label="LinkedIn">
 				<svg
 					class="h-6 w-6 text-white"
 					fill="currentColor"
@@ -42,12 +39,8 @@
 						d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5v-14a5 5 0 00-5-5zm-11.75 20h-2.5v-9h2.5v9zm-1.25-10.3a1.45 1.45 0 110-2.9 1.45 1.45 0 010 2.9zm13 10.3h-2.5v-4.5c0-1.1-.4-1.8-1.3-1.8s-1.5.8-1.5 1.8v4.5h-2.5v-9h2.5v1.2c.5-.8 1.4-1.2 2.3-1.2 2.1 0 3.5 1.4 3.5 3.8v5.2z"
 					/>
 				</svg>
-			</a>
-			<a
-				href="https://github.com/YogiAnggara129"
-				target="_blank"
-				class="bg-opacity-20 hover:bg-opacity-30 transform rounded-full bg-white p-3 transition-all duration-300 hover:scale-110"
-			>
+			</FooterIcon>
+			<FooterIcon href="https://github.com/YogiAnggara129" target="_blank" label="Github">
 				<svg
 					class="h-6 w-6 text-white"
 					fill="currentColor"
@@ -60,7 +53,7 @@
 						clip-rule="evenodd"
 					/>
 				</svg>
-			</a>
+			</FooterIcon>
 		</div>
 
 		<p class="mb-6 text-center text-sm text-gray-400">

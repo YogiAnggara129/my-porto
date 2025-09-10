@@ -6,11 +6,11 @@
 </script>
 
 <div
-	class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white bg-white/30 p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
+	class="bg-opacity-20 ring-opacity-20 border-opacity-20 relative overflow-hidden rounded-2xl border border-white/25 bg-white/20 p-6 ring-1 ring-white drop-shadow-2xl backdrop-blur-3xl backdrop-filter"
 	data-aos="zoom-in"
 	data-aos-delay="300"
 >
-	<div class="bg-opacity-10 absolute inset-0 z-0 bg-white/30 backdrop-blur-xl"></div>
+	<div class="bg-opacity-10 absolute inset-0 z-0 bg-white/20 backdrop-blur-xl"></div>
 	<img
 		src={item.image}
 		alt={item.title}

@@ -1,8 +1,24 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { afterNavigate } from '$app/navigation';
+	import 'aos/dist/aos.css';
+	import AOS from 'aos';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
+
+	afterNavigate(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+
+	onMount(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			offset: 100
+		});
+	});
 </script>
 
 <svelte:head>

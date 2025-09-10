@@ -1,10 +1,10 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import type { SectionType } from '$lib/stores/navigation';
 
 	const sectionType: SectionType = 'experience';
-</script>
+</script> -->
 
-<section id={sectionType} class="bg-slate-700 pt-36 pb-32" data-aos="fade-up">
+<section id="experience" class="bg-slate-700 pt-36 pb-32" data-aos="fade-up">
 	<div class="container mx-auto px-6">
 		<!-- Header -->
 		<div class="mx-auto mb-16 max-w-xl text-center" data-aos="fade-down" data-aos-delay="100">
@@ -20,9 +20,7 @@
 				<span
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
-				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white/30 p-6 backdrop-blur-lg transition"
-				>
+				<div class="ml-6 rounded-xl bg-white/10 p-6 backdrop-blur-lg transition hover:bg-white/20">
 					<time class="block text-sm text-gray-300">Januari 2025 - Sekarang</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Fullstack Engineer</h3>
 					<h4 class="text-base font-semibold text-gray-200">Digital Exceleration Nusantara</h4>
@@ -36,9 +34,7 @@
 				<span
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
-				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
-				>
+				<div class="ml-6 rounded-xl bg-white/10 p-6 backdrop-blur-lg transition hover:bg-white/20">
 					<time class="block text-sm text-gray-300">Januari - Desember 2024</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
 					<h4 class="text-base font-semibold text-gray-200">Matrica Consulting Service</h4>
@@ -55,7 +51,7 @@
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
 				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white/20 p-6 backdrop-blur-lg transition"
 				>
 					<time class="block text-sm text-gray-300">Juli - Desember 2023</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
@@ -73,7 +69,7 @@
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
 				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white/20 p-6 backdrop-blur-lg transition"
 				>
 					<time class="block text-sm text-gray-300">Januari - Juni 2023</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Frontend Developer Freelance</h3>
@@ -90,7 +86,7 @@
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
 				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white/20 p-6 backdrop-blur-lg transition"
 				>
 					<time class="block text-sm text-gray-300">September 2022 - Maret 2023</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Mobile Developer</h3>
@@ -107,7 +103,7 @@
 					class="absolute -left-2 mt-1.5 h-4 w-4 rounded-full border-2 border-slate-700 bg-purple-200"
 				></span>
 				<div
-					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white p-6 backdrop-blur-lg transition"
+					class="bg-opacity-10 hover:bg-opacity-20 ml-6 rounded-xl bg-white/20 p-6 backdrop-blur-lg transition"
 				>
 					<time class="block text-sm text-gray-300">Februari – April 2021</time>
 					<h3 class="mt-2 text-xl font-semibold text-white">Data Engineer Internship</h3>

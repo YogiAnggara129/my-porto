@@ -6,6 +6,7 @@
 	import NavBar from '$lib/sections/nav/NavBar.svelte';
 	import ContactSection from '$lib/sections/contact/ContactSection.svelte';
 	import FooterSection from '$lib/sections/footer/FooterSection.svelte';
+	import WebinarSection from '$lib/sections/webinar/WebinarSection.svelte';
 </script>
 
 <NavBar />
@@ -13,5 +14,6 @@
 <AboutSection />
 <PortfolioSection />
 <ExperienceSection />
+<WebinarSection />
 <ContactSection />
 <FooterSection />

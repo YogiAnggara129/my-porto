@@ -9,7 +9,7 @@
 <!-- About Section -->
 <section
 	id={sectionType}
-	class="bg-opacity-10 border-opacity-20 border-t border-white bg-white/30 px-6 py-20 backdrop-blur-md"
+	class="border-t border-white/20 bg-white/10 px-6 py-20 backdrop-blur-md"
 	data-aos="fade-up"
 >
 	<div class="mx-auto max-w-3xl text-center">
