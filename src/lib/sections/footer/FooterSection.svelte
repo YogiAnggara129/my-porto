@@ -1,4 +1,5 @@
 <script>
+	import { m } from '$lib/paraglide/messages';
 	import FooterIcon from './components/FooterIcon.svelte';
 </script>
 
@@ -11,10 +12,8 @@
 		class="absolute inset-0 bg-gradient-to-br from-purple-700 to-blue-500 opacity-20 mix-blend-overlay"
 	></div>
 	<div class="relative mx-auto max-w-4xl px-6">
-		<h3 class="mb-6 text-center text-3xl font-bold">Thank you for visiting!</h3>
-		<p class="mb-10 text-center text-gray-300">
-			Let's connect and build something amazing together 🚀
-		</p>
+		<h3 class="mb-6 text-center text-3xl font-bold">{m.footer__title()}</h3>
+		<p class="mb-10 text-center text-gray-300">{m.footer__subtitle()}</p>
 
 		<div class="mb-10 flex justify-center space-x-6">
 			<FooterIcon href="mailto:yogianggara129@gmail.com" label="Email">
@@ -56,9 +55,7 @@
 			</FooterIcon>
 		</div>
 
-		<p class="mb-6 text-center text-sm text-gray-400">
-			Passionate about building impactful digital products 🌎
-		</p>
-		<p class="text-center text-sm text-gray-500">&copy; 2025 Yogi Anggara. All rights reserved.</p>
+		<p class="mb-6 text-center text-sm text-gray-400">{m.footer__subtitle_2()}</p>
+		<p class="text-center text-sm text-gray-500">{m.footer__copyright()}</p>
 	</div>
 </footer>
