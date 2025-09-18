@@ -1,0 +1,4 @@
+FTP_HOST="ftp.namadomain.com"
+FTP_USER="your-ftp-username"
+FTP_PASS="your-ftp-password"
+FTP_TARGET_DIR="domains/namadomain.com/public_html"
