@@ -1,4 +1,4 @@
-import { getLocale, type Locale } from '$lib/paraglide/runtime';
+import { type Locale } from '$lib/paraglide/runtime';
 import { derived } from 'svelte/store';
 import { locale } from './locale';
 
